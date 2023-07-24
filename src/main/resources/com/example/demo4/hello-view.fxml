@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="584.0" prefWidth="936.0" spacing="20.0" style="-fx-background-color: #ffbbbb;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.example.demo4.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" />
+   <HBox alignment="CENTER" prefHeight="177.0" prefWidth="896.0" VBox.vgrow="NEVER">
+      <children>
+         <VBox fillWidth="false" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Label fx:id="firstCard" prefHeight="177.0" prefWidth="135.0" text="Карта первого игрока" />
+            </children>
+         </VBox>
+         <VBox fillWidth="false" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Label fx:id="secondCard" prefHeight="177.0" prefWidth="135.0" text="Карта второго игрока" />
+            </children>
+         </VBox>
+         <VBox fillWidth="false" layoutX="264.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Label fx:id="situationLabel" prefHeight="177.0" prefWidth="135.0" text="Карта ситуации" textAlignment="CENTER" wrapText="true" />
+            </children>
+         </VBox>
+         <VBox fillWidth="false" layoutX="391.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Label fx:id="thirdCard" prefHeight="177.0" prefWidth="135.0" text="Карта третьего игрока" />
+            </children>
+         </VBox>
+         <VBox fillWidth="false" layoutX="518.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Label fx:id="fourCard" prefHeight="177.0" prefWidth="135.0" text="Карта четвертого игрока" wrapText="true" />
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <HBox fx:id="cardBox" layoutX="30.0" layoutY="232.0" prefHeight="177.0" prefWidth="896.0">
+      <children>
+         <VBox alignment="BOTTOM_CENTER" fillWidth="false" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#sendCard" style="-fx-background-color: lightyellow;" text="Использовать" textFill="#2271b5">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_CENTER" fillWidth="false" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#sendCard" style="-fx-background-color: lightyellow;" text="Использовать" textFill="#2271b5">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_CENTER" fillWidth="false" layoutX="137.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#sendCard" style="-fx-background-color: lightyellow;" text="Использовать" textFill="#2271b5">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_CENTER" fillWidth="false" layoutX="264.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#sendCard" style="-fx-background-color: lightyellow;" text="Использовать" textFill="#2271b5">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_CENTER" fillWidth="false" layoutX="391.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#sendCard" style="-fx-background-color: lightyellow;" text="Использовать" textFill="#2271b5">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_CENTER" fillWidth="false" layoutX="518.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#sendCard" style="-fx-background-color: lightyellow;" text="Использовать" textFill="#2271b5">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_CENTER" fillWidth="false" layoutX="645.0" layoutY="10.0" prefHeight="200.0" prefWidth="127.0" style="-fx-background-color: #ccccff; -fx-background-radius: 15;">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#sendCard" style="-fx-background-color: lightyellow;" text="Использовать" textFill="#2271b5">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <Button mnemonicParsing="false" onAction="#reload" prefHeight="43.0" prefWidth="154.0" style="-fx-background-color: black;" text="ОБНОВИТЬ" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="19.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#updatePage" prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: orange; -fx-border-color: white; -fx-border-width: 3; -fx-border-radius: 5; -fx-background-radius: 10;" text="ПЕРЕЗАГРУЗИТЬ">
+      <font>
+         <Font name="System Bold" size="19.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#requestCard" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5;" text="Запросить карты" />
+</VBox>
