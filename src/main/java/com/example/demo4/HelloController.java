@@ -1,5 +1,7 @@
 package com.example.demo4;
 
+import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -37,6 +39,37 @@ public class HelloController {
     private HBox cardBox;
 
     @FXML
+    void initialize() throws ParseException, IOException {
+        class GetDataThread extends Thread {
+            public void run() {
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            doUpdate();
+                        } catch (ParseException e) {
+                            throw new RuntimeException(e);
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                });
+            }
+        }
+        GetDataThread getDataThread = new GetDataThread();
+        getDataThread.start();
+        AnimationTimer timerForTab = new AnimationTimer() {
+            int frameCount = 0;
+            @Override
+            public void handle(long now) {
+                if (frameCount % 100 == 0) getDataThread.run();
+                frameCount++;
+            }
+        };
+        timerForTab.start();
+    }
+
+    @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
@@ -69,7 +102,11 @@ public class HelloController {
 
     @FXML
     protected void updatePage(ActionEvent event) throws IOException, ParseException {
-        String table = setPostRequest(servUrl + "/updateTable","{\"id\": " + userId + ", \"name\" : \"" + ((Button)event.getSource()).getUserData() + "\"}" );
+       doUpdate();
+    }
+
+    void doUpdate() throws ParseException, IOException {
+        String table = setPostRequest(servUrl + "/updateTable","{\"id\":" + userId + "}" );
         JSONParser parser = new JSONParser();
         JSONObject tableJson = (JSONObject) parser.parse(table);
 
